@@ -1,17 +1,22 @@
+var webpack = require("webpack");
 module.exports = {
-  entry: './src/index/js',
-  output: {
-    path:'./dist',
-    filename:'bundle.js'
-  },
-  module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude:/node_modules/,
-      loader:babel-loader,
-      query: {
-        presets: ['es2015', 'react']
-      }
-    }]
-  }
+entry: __dirname + "/src/index.js",
+output: {
+path: __dirname + "/dist/assets",
+filename: "bundle.js",
+publicPath: "assets"
+},
+devServer: {
+    inline: true,
+    contentBase: __dirname + "/dist",
+    port: 3000
+},
+module: {
+    rules: [
+    {
+    test: /\.js$/,
+    loader: ["babel-loader"],
+    }
+    ]
+}
 }
