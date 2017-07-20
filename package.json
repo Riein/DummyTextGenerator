@@ -1,7 +1,13 @@
 {
   "name": "dummy_text_generator",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Simple dummy text generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -9,25 +15,6 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "^1.0.10",
     "webpack": "^3.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Riein/DummyTextGenerator.git"
-  },
-  "author": "Sasha Demyanik",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Riein/DummyTextGenerator/issues"
-  },
-  "homepage": "https://github.com/Riein/DummyTextGenerator#readme"
+  }
 }
