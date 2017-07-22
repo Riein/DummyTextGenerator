@@ -10,9 +10,6 @@ devServer: {
     contentBase: __dirname + "/dist",
     port: 3000
 },
-externals : {
-  'react-dom': 'ReactDOM'
-},
 module: {
   rules: [{
     test: /\.js$/,
