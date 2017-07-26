@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Output from './Output';
 import axios from 'axios';
 
 class App extends Component {
@@ -31,7 +32,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        My App!
+        <h1>Dummy Text Generator</h1>
+        <Output value={this.state.text}/>
       </div>
     );
   }
