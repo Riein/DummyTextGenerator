@@ -23119,7 +23119,7 @@ var App = function (_Component) {
 
     _this.state = {
       paras: 4,
-      html: false,
+      html: true,
       text: ''
     };
     return _this;
@@ -23140,6 +23140,8 @@ var App = function (_Component) {
           console.log(this.state);
         });
       }).catch(function (err) {
+        // If an error occurs in retrieving data from the API or setting the
+        // state of the text, then throw an error
         console.log(err);
       });
     }

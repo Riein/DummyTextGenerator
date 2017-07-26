@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
     this.state = {
       paras: 4,
-      html: false,
+      html: true,
       text: ''
     }
   }
@@ -17,14 +17,15 @@ class App extends Component {
 
   getText(){
     axios.get('http://hipsterjesus.com/api?paras='+this.state.paras+'&html='+this.state.html)
-      .then((response) => {
-        this.setState({text: response.data.text}, function(){
-          console.log(this.state);
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    .then((response)=> {
+    this.setState({text: response.data.text}, function() {
+      console.log(this.state);
+    });
+  })
+    .catch((err) => { // If an error occurs in retrieving data from the API or setting the
+                  // state of the text, then throw an error
+      console.log(err);
+    });
   }
 
   render() {
